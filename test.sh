@@ -12,4 +12,4 @@ $(df -h)
 "
 echo "$output" >"$output_file"
 echo "Output saved to $output_file"
-scp "$output_file" ansible@192.168.1.6 :/home/ansible --password "xyz"
+sshpass -p 'xyz' scp "$output_file" ansible@192.168.1.6:/home/ansible
