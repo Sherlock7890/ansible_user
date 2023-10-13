@@ -1,0 +1,10 @@
+---
+
+ - name: Run shell script and store output
+   hosts: all
+   tasks:
+    - name: execute shell script
+      register: Output
+      script: /home/ansible/ansible_user/test.sh        
+    - debug:
+        var: Output.stdout_lines 
